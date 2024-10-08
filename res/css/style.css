@@ -19,7 +19,7 @@ ul {
     border-radius: 15px;
 }
 
-.nav {
+header + ul {
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -40,7 +40,7 @@ a {
     background-color: rgb(198, 185, 154);
 }
 
-section {
+#posts_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +76,7 @@ section {
     width: 100%;
     max-width: 400px;
     height: auto;
-  }
+}
 
 @media (min-width: 450px) {
     .header,
