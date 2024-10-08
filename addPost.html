@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/css/stylePost.css">
     <title>Add Post</title>
@@ -12,14 +11,11 @@
         <ul class="nav">
             <li><a href="index.html">Home</a></li>
         </ul>
-
-        <a class="user_pic" href="#"> 
-            <img src="res/images/user.png" width="50" height="50" alt="My profile picture">
-        </a>
+        <a class="user_pic" href="login.html"><img src="res/images/user.png" width="50" height="50" alt="My profile picture"></a>
     </header>
 
     <section class="add_post_container">
-        <form action="index.html" method="post">
+        <form action="index.html" method="get"> 
             <div class="form_group">
                 <label for="post_body">Post Body:</label>
                 <textarea id="post_body" name="post_body" rows="5" cols="50" required></textarea>
@@ -28,13 +24,10 @@
                 <label for="post_image">Select file:</label>
                 <input type="file" id="post_image" name="post_image">
             </div>
-            <div class="form_group">
-                <button type="submit" class="create_post_btn">Create Post</button>
-            </div>
+            <button type="submit" class="create_post_btn">Create Post</button>
         </form>
     </section>
 
-    <footer class="footer">
-    </footer>
+    <footer class="footer"></footer>
 </body>
 </html>

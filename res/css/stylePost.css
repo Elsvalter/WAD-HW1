@@ -1,83 +1,75 @@
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Add box-sizing for consistency */
+    box-sizing: border-box;
+    
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 .header {
-    background-color: bisque; /* Change background color */
-    padding: 0.5em; /* Uniform padding */
-    border-radius: 15px; /* Rounded corners */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center vertically */
+    background-color: bisque;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.user_pic {
-    margin-left: auto; /* Push the image to the right */
-}
-
 
 .nav {
-    list-style-type: none;
-    margin: 5px 0; /* Adjusted margin */
+    list-style: none;
     display: flex;
-}
-
-.nav li {
-    margin-right: 20px;
 }
 
 .nav li a {
-    padding: 8px 12px; /* Adjusted padding */
-    display: block;
-    text-align: center; /* Centered text */
-    font-size: .99em; /* Adjusted font size */
-    color: black; /* Changed text color */
-    text-decoration: none; /* Remove underline */
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
 }
 
 .nav li a:hover {
-    background-color: rgb(198, 185, 154); /* Change background on hover */
+    background-color: rgb(198, 185, 154);
 }
 
-/* Add Post Container Styles */
 .add_post_container {
-    flex: 1; /* Allow this section to grow */
+    flex: 1;
     display: flex;
-    flex-direction: column; /* Change to column direction for form */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 25px; /* Uniform margin */
+    margin: 25px;
 }
 
 .form_group {
     margin-bottom: 15px;
 }
 
-/* Button Styles */
 .create_post_btn {
     background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px; /* Rounded button corners */
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .create_post_btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049;
 }
 
-/* Footer Styles */
+textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+#post_body {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
 .footer {
     background-color: #333;
     color: white;
@@ -85,50 +77,28 @@ body {
     padding: 10px;
 }
 
-/* Flexbox Layout for Mobile Responsiveness */
+form > .form_group {
+    margin-bottom: 20px;
+}
+
+.form_group + button {
+    margin-top: 10px;
+}
+
+.form_group ~ .form_group {
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
 @media (max-width: 600px) {
     .header {
-        flex-direction: column; /* Stacked on small screens */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
     }
-
     .nav {
-        flex-direction: column; /* Stacked navigation items */
-        align-items: flex-start; /* Align items to the start */
+        flex-direction: column;
     }
-
     .add_post_container {
-        width: 100%; /* Full width on mobile */
-        padding: 10px; /* Less padding on mobile */
+        width: 100%;
+        padding: 10px;
     }
-}
-
-/* Descendant Selector Example */
-.add_post_container p {
-    font-size: 14px; /* Example for a paragraph inside add_post_container */
-}
-
-/* Child Selector Example */
-.header > .nav {
-    margin-right: auto; /* Margin for the navigation child */
-}
-
-/* Adjacent Sibling Selector Example */
-.form_group + .form_group {
-    margin-top: 10px; /* Space between form groups */
-}
-
-/* General Sibling Selector Example */
-.footer ~ .add_post_container {
-    margin-top: 20px; /* Space above the add_post_container */
-}
-
-/* Pseudo-element Example */
-.nav li a::after {
-    content: '|'; /* Add a separator after each link */
-    margin-left: 10px;
-}
-
-.nav li:last-child a::after {
-    content: ''; /* Remove separator after the last link */
 }
