@@ -2,3 +2,5 @@ Group I
 Annabel Aleksius, Elisabth Valter, Mattias Minejev
 Repository link:
 https://github.com/Elsvalter/WAD-HW1.git
+Deployed project link:
+https://l.messenger.com/l.php?u=https%3A%2F%2Felsvalter.github.io%2FWAD-HW1%2F&h=AT23uxJKmYrF2UBCCcUJcrifqO5eBVcadUQ-lO0asZULUu3_mdC8W8w5wjPmnNE6IZCz7tx7IUWqfLQrqZxLFMNaRpJ2C7ET_UQPVQ16FSpveREQU1Z3NyrHLb56C58jeUv0vg
