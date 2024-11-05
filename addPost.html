@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="res/css/stylePost.css">
+    <link rel="stylesheet" href="res/css/styles.css">
     <title>Add Post</title>
 </head>
 <body>
@@ -35,23 +35,21 @@
         </form>
     </section>
 
-    <footer class="footer"></footer>
-    
     <script>
-      const userPic = document.getElementById('user-pic');
-      const dropdown = document.getElementById('user-dropdown');
-  
-      userPic.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default action of the link
-          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block'; // Toggle dropdown visibility
-      });
-  
-      // Optional: Close the dropdown if clicking outside of it
-      window.addEventListener('click', function(event) {
-          if (!userPic.contains(event.target) && !dropdown.contains(event.target)) {
-              dropdown.style.display = 'none';
-          }
-      });
-  </script>  
+        const userPic = document.getElementById('user-pic');
+        const dropdown = document.getElementById('user-dropdown');
+    
+        userPic.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action of the link
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block'; // Toggle dropdown visibility
+        });
+    
+        // Optional: Close the dropdown if clicking outside of it
+        window.addEventListener('click', function(event) {
+            if (!userPic.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    </script>  
 </body>
 </html>

@@ -7,89 +7,102 @@
 
 /* Body Styling */
 body {
-    font-family: 'Times New Roman', Times, serif;
     background-color: rgb(248, 248, 248); /* Beige theme */
     color: black;
 }
 
 /* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: bisque; /* Light beige */
-    padding: 8px;
-    border-radius: 8px;
-}
-
-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 8px 12px;
-    display: block;
-    font-weight: normal;
-}
-
-nav ul li a:hover {
-    background-color: rgb(198, 185, 154);
-    border-radius: 5px;
-}
-
-/* Header */
 .header {
-    background-color: bisque;
+    background-color: bisque; /* Light beige */
     padding: 0.5em;
     border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
 }
 
-header + ul {
-    margin: 5px 0;
+.nav {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flex to align items */
 }
 
-/* Posts Container */
-#posts_container {
+.add_post_container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 25px;
 }
-
-.post {
-    background-color: bisque;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    padding: 15px;
-    width: 430px;
+.form_group {
+    margin-bottom: 15px;
 }
+.create_post_btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 120px;
 
-.post_head {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 5px;
 }
-
-.post_body > p {
-    margin: 8px 0;
-    font-size: 1em;
+.create_post_btn:hover {
+    background-color: #45a049;
 }
-
-.post_picture {
+textarea {
+    display: block;
     width: 100%;
-    max-width: 400px;
-    height: auto;
+    height: 100px;
+}
+#post_body {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.form_group + button {
+    margin-top: 6px;
+}
+
+.nav a {
+    padding: 20px 12px;
+    display: block;
+    text-align: center;
+    font-size: 0.99em;
+    color: black;
+    text-decoration: none;
+    border: none;
+    box-shadow: none;
+}
+
+.nav a:hover {
+    background-color: rgb(198, 185, 154);
+}
+
+/* Dropdown */
+.dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: white; /* Background color for the dropdown */
+    border: 1px solid #ccc; /* Border around the dropdown */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    right: 0; 
+    z-index: 1000; 
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(198, 185, 154); /* Highlight on hover */
 }
 
 /* Login Form Styling */
@@ -111,10 +124,6 @@ header + ul {
 
 h2 {
     margin: 10px 0;
-}
-
-h2 + p {
-    color: grey;
 }
 
 .create-account {
@@ -158,8 +167,38 @@ button.login-btn:hover {
     font-size: 14px;
 }
 
-.forgot-password:hover {
-    text-decoration: underline;
+/* Posts Container */
+#posts_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.post {
+    background-color: bisque;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 430px;
+}
+
+.post_head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.post_body > p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.post_picture {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 /* Responsive Design */
@@ -171,6 +210,21 @@ button.login-btn:hover {
         width: 90%;
     }
 }
+
+@media (min-width: 450px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 450px) {
+    .user_pic {
+        display: none;
+    }
+}
+
 .dropdown {
     display: none; /* Initially hidden */
     position: absolute;
@@ -178,7 +232,7 @@ button.login-btn:hover {
     border: 1px solid #ccc; /* Border around the dropdown */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    margin-top: 50; /* Space between the user pic and dropdown */
+    margin-block-start: 55px;
     right: 0; 
     z-index: 1000; 
 }
