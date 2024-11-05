@@ -12,7 +12,14 @@
             <li><a href="index.html" id="home">Home</a></li>
             <li><a href="addPost.html" id="addPost">Add Post</a></li>
         </ul>
-        <a class="user_pic" href="login.html"><img src="res/images/user.png" width="50" height="50" alt="My profile picture"></a>
+        <a class="user_pic" href="#" id="user-pic">
+            <img src="res/images/user.png" width="50" height="50" alt="My profile picture">
+        </a>
+        <div class="dropdown" id="user-dropdown">
+            <div class="dropdown-item">Username: User123</div>
+            <div class="dropdown-item">Email: user@example.com</div>
+            <div class="dropdown-item" id="logout">Logout</div>
+        </div>
       </nav>
   
       <div class="login-container">
@@ -29,5 +36,32 @@
               <a href="#" class="forgot-password">Forget password</a>
           </div>
       </div>
+
+      <a class="user_pic" href="#" id="user-pic">
+        <img src="res/images/user.png" width="50" height="50" alt="My profile picture">
+    </a>
+    <div class="dropdown" id="user-dropdown">
+        <div class="dropdown-item">Username: User123</div>
+        <div class="dropdown-item">Email: user@example.com</div>
+        <div class="dropdown-item" id="logout">Logout</div>
+    </div>
+    
+    <script>
+      const userPic = document.getElementById('user-pic');
+      const dropdown = document.getElementById('user-dropdown');
+  
+      userPic.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default action of the link
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block'; // Toggle dropdown visibility
+      });
+  
+      // Optional: Close the dropdown if clicking outside of it
+      window.addEventListener('click', function(event) {
+          if (!userPic.contains(event.target) && !dropdown.contains(event.target)) {
+              dropdown.style.display = 'none';
+          }
+      });
+  </script>  
   </body>
+
   </html>

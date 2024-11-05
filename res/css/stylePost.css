@@ -102,3 +102,25 @@ form > .form_group {
         padding: 10px;
     }
 }
+
+.dropdown {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: white; /* Background color for the dropdown */
+    border: 1px solid #ccc; /* Border around the dropdown */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 50; /* Space between the user pic and dropdown */
+    right: 0; 
+    z-index: 1000; 
+}
+
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: rgb(198, 185, 154); /* Highlight on hover */
+}
