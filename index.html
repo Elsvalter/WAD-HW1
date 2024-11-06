@@ -113,11 +113,10 @@
       const dropdown = document.getElementById('user-dropdown');
   
       userPic.addEventListener('click', function(event) {
-          event.preventDefault(); // Prevent the default action of the link
           dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block'; // Toggle dropdown visibility
       });
   
-      // Optional: Close the dropdown if clicking outside of it
+      //Close the dropdown if clicking outside of it
       window.addEventListener('click', function(event) {
           if (!userPic.contains(event.target) && !dropdown.contains(event.target)) {
               dropdown.style.display = 'none';
